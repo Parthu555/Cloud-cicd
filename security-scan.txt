@@ -1,0 +1,7 @@
+DevSecOps Security Checks
+
+1. Source Code Security
+2. Dependency Vulnerability Scanning
+3. Docker Image Scanning
+4. Kubernetes Configuration Security
+5. Secure Deployment

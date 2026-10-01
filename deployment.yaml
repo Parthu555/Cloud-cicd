@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pbl3-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: pbl3-app
+  template:
+    metadata:
+      labels:
+        app: pbl3-app
+    spec:
+      containers:
+        - name: pbl3-app
+          image: pbl3-app:1.0
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 5000s

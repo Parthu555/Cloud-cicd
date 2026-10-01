@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blue-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: pbl3-app
+      version: blue
+  template:
+    metadata:
+      labels:
+        app: pbl3-app
+        version: blue
+    spec:
+      containers:
+        - name: pbl3-app
+          image: pbl3-app:1.0
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 5000
